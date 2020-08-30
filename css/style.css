@@ -2,6 +2,7 @@ body {
     margin: 0;
     font: 14px 'Roboto', sans-serif;
     color: #2d2d35;
+    line-height: 1.5;
 }
 
 a {
@@ -12,6 +13,10 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+p {
+    color: #788794;
 }
 
 /* General Classes */
@@ -51,6 +56,10 @@ a:hover {
 .wrapper {
     max-width: 1140px;
     margin: 0 auto;
+}
+
+.hide {
+    display: none;
 }
 
 /* Header */
@@ -204,10 +213,6 @@ a:hover {
     margin: 0;
 }
 
-.card .content-card p {
-    color: #788794;
-}
-
 .content-card p > .fas {
     margin-right: 5px;
 }
@@ -306,4 +311,53 @@ a:hover {
     background-color: #292e32;
     color: #fff;
     font-size: 12px;
+}
+
+/* Modal */
+.modal {
+    background-color: #fbfbfb;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 600px;
+    min-height: 50%;
+    box-shadow: 0 4px 8px 0 rgba(88, 98, 109, 0.6);
+    border-radius: 5px;
+}
+
+.modal .close {
+    color: #788794;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.modal .content {
+    padding: 20px 60px;
+    overflow: auto;
+    max-height: 350px;
+}
+
+.modal .content h2,
+.modal .content h3 {
+    text-align: center;
+}
+
+.modal .content .success,
+.modal .content .error {
+    text-align: center;
+}
+
+.modal .fa-check-circle {
+    font-size: 46px;
+    color: #40b70a; 
+}
+
+.modal .fa-times-circle {
+    font-size: 46px;
+    color: #b30f0f; 
 }
