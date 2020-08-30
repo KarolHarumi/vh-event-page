@@ -20,11 +20,17 @@ p {
 }
 
 /* General Classes */
+.button-default, 
+.outline-button-default {
+    transition: all 1s;
+    cursor: pointer;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
 .button-default {
     background-color: #2c9bf5;
-    border-radius: 5px;
-    color: #fff;
-    padding: 8px 20px;
+    color: #fff;    
 }
 
 .button-default:hover {
@@ -35,15 +41,17 @@ p {
 .outline-button-default {
     background-color: #fff;
     border: 1px solid #2c9bf5;
-    border-radius: 5px;
     color: #2c9bf5;
-    padding: 8px 20px;
 }
 
 .outline-button-default:hover {
     text-decoration: none;
     color: #02559c;
     border: 1px solid #02559c;
+}
+
+.outline-button-default + .button-default {
+    margin-left: 10px;
 }
 
 .container {
@@ -222,13 +230,6 @@ p {
 	justify-content: center;
     padding: 10px 0 20px;
 }
-
-.card a + a,
-.featured-card a + a,
-.half-card a + a {
-    margin-left: 10px;
-}
-
 
 /* Featured card */
 .featured-card {
