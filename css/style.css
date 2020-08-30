@@ -26,6 +26,7 @@ p {
     cursor: pointer;
     padding: 8px 20px;
     border-radius: 5px;
+    border: 0;
 }
 
 .button-default {
@@ -52,6 +53,13 @@ p {
 
 .outline-button-default + .button-default {
     margin-left: 10px;
+}
+
+.button-default[disabled], 
+.outline-button-default[disabled] {
+    background-color: #dae0e6;
+    color: #b7c0c9;
+    cursor: not-allowed;
 }
 
 .container {
@@ -323,9 +331,10 @@ p {
     right: 0;
     margin: auto;
     width: 600px;
-    min-height: 50%;
+    max-height: 50%;
     box-shadow: 0 4px 8px 0 rgba(88, 98, 109, 0.6);
-    border-radius: 5px;
+    border-radius: 5px; 
+    padding: 40px 0;
 }
 
 .modal .close {
@@ -337,20 +346,16 @@ p {
     cursor: pointer;
 }
 
-.modal .content {
-    padding: 20px 60px;
+.modal .modal-content {
+    padding: 0 60px;
     overflow: auto;
     max-height: 350px;
 }
 
-.modal .content h2,
-.modal .content h3 {
+.modal .success,
+.modal .error {
     text-align: center;
-}
-
-.modal .content .success,
-.modal .content .error {
-    text-align: center;
+    padding: 20px 60px;
 }
 
 .modal .fa-check-circle {
