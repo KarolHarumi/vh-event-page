@@ -128,6 +128,12 @@ a:hover {
     box-shadow: 0 0 5px 2px #dae0e6;
     border-radius: 5px;
     overflow: hidden;
+    position: relative;
+    transition: all 1s;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px 5px #b8c3cc;
 }
 
 .card + .card {
@@ -158,20 +164,36 @@ a:hover {
     box-shadow: 0 0 4px 0px #58626d;
 }
 
-.card .f-brazil {
+.card .icon-brazil {
     background-image: url('./../assets/images/brazil.png');
 }
 
-.card .f-chile {
+.card .icon-chile {
     background-image: url('./../assets/images/chile.png');
 }
 
-.card .f-argentina {
+.card .icon-argentina {
     background-image: url('./../assets/images/argentina.png');
 }
 
-.card .f-colombia {
+.card .icon-colombia {
     background-image: url('./../assets/images/colombia.png');
+}
+
+.card .city-sp {
+    background-image: url('./../assets/images/sp_city.jpeg');
+}
+
+.card .city-sa {
+    background-image: url('./../assets/images/sa_city.jpg');
+}
+
+.card .city-me {
+    background-image: url('./../assets/images/me_city.jpeg');
+}
+
+.card .city-ro {
+    background-image: url('./../assets/images/ro_city.jpg');
 }
 
 .card .content-card {
@@ -183,29 +205,29 @@ a:hover {
 }
 
 .card .content-card p {
-    color: #95a0ac;
+    color: #788794;
+}
+
+.content-card p > .fas {
+    margin-right: 5px;
 }
 
 .card .button-container {
     display: flex;
-	justify-content: flex-end;
-    padding: 0 20px 20px;
+	justify-content: center;
+    padding: 10px 0 20px;
 }
 
 .card a + a,
 .featured-card a + a,
-.featured-card2 a + a {
+.half-card a + a {
     margin-left: 10px;
 }
 
 
-/* Featured left */
+/* Featured card */
 .featured-card {
     width: 100%;
-    background-color: #fbfbfb;
-    box-shadow: 0 0 5px 2px #dae0e6;
-    border-radius: 5px;
-    overflow: hidden;
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -215,34 +237,10 @@ a:hover {
     min-height: 350px;
 }
 
-.featured-card + .featured-card {
-    margin-left: 20px;
-}
-
 .featured-card .event-photo {
     width: 50%;
     height: 100%;
-    background: url('./../assets/images/new_york.jpg') no-repeat 0 0/cover;
-}
-
-.featured-card .ep-sp,
-.featured-card2 .ep-sp {
-    background-image: url('./../assets/images/sp_city.jpeg');
-}
-
-.featured-card .ep-sa,
-.featured-card2 .ep-sa {
-    background-image: url('./../assets/images/sa_city.jpg');
-}
-
-.featured-card .ep-me,
-.featured-card2 .ep-me {
-    background-image: url('./../assets/images/me_city.jpeg');
-}
-
-.featured-card .ep-ro,
-.featured-card2 .ep-ro {
-    background-image: url('./../assets/images/ro_city.jpg');
+    background-size: cover;
 }
 
 .featured-card .content-card {
@@ -251,52 +249,54 @@ a:hover {
     box-sizing: border-box;
 }
 
-.featured-card .content-card h2 {
-    margin: 0;
-}
-
-.featured-card .content-card .button-container {
+.featured-card .button-container {
     display: flex;
+    justify-content: flex-end;
+    padding: 0 20px 20px;
 }
 
-/*  */
-.featured-card2 {
+/*  Half card */
+.half-card {
     width: 50%;
-    background-color: #fbfbfb;
-    box-shadow: 0 0 5px 2px #dae0e6;
-    border-radius: 5px;
-    overflow: hidden;
     display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
 	align-items: center;
-    align-content: stretch;
     min-height: 350px;
 }
 
-.featured-card2 + .featured-card2 {
-    margin-left: 20px;
-}
-
-.featured-card2 .event-photo {
+.half-card .event-photo {
     width: 50%;
     height: 100%;
     background-size: cover;
 }
 
-.featured-card2 .content-card {
-    padding: 20px 30px;
+.half-card .content-card {
+    padding: 20px 15px;
     width: 50%;
     box-sizing: border-box;
 }
 
-.featured-card2 .content-card h2 {
-    margin: 0;
+.half-card .content-card .button-container {
+	justify-content: center;
+    padding: 10px 0 0;
 }
 
-.featured-card2 .content-card .button-container {
-    display: flex;
+.half-card .premium-flag {
+    background-color: #ff7a37;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    font-size: 12px;
+}
+
+.half-card .premium-flag > i {
+    margin-right: 5px;
+}
+
+.half-card.premium-card {
+    background: url('./../assets/images/bg_detail.png') no-repeat 0 0;
 }
 
 /* Footer */
