@@ -239,6 +239,59 @@ p {
     padding: 10px 0 20px;
 }
 
+.share {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.share .fa-share-alt {
+    color: #fff;
+    font-size: 18px;
+}
+
+.share .share-buttons {
+    display: none;
+}
+
+.share:hover .share-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: #fff;
+    border-radius: 5px;
+    right: 0;
+    top: 0;
+    padding: 0 8px;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.share-buttons .share-text {
+    color: #788794;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.share-buttons .social {
+    margin: 0 2px;
+}
+
+.share-buttons .fab {
+    font-size: 18px;
+    line-height: 33px;
+    color: #2c9bf5;
+}
+
+.share-buttons .fab:hover {
+    color: #02559c;
+}
+
 /* Featured card */
 .featured-card {
     width: 100%;
@@ -265,8 +318,7 @@ p {
 
 .featured-card .button-container {
     display: flex;
-    justify-content: flex-end;
-    padding: 0 20px 20px;
+    justify-content: space-between;
 }
 
 /*  Half card */
@@ -311,6 +363,10 @@ p {
 
 .half-card.premium-card {
     background: url('./../assets/images/bg_detail.png') no-repeat 0 0;
+}
+
+.half-card .button-container {
+    margin-bottom: 20px;
 }
 
 /* Footer */
