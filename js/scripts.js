@@ -60,9 +60,11 @@ function closeModal() {
           btnClose = document.querySelector('.close');
 
     modal.classList.add('hide');
+    document.querySelector('#overlay').classList.add('hide');
 
     btnClose.addEventListener('click', () => {
         modal.classList.add('hide');
+        document.querySelector('#overlay').classList.add('hide');
     });
 }
 
@@ -74,6 +76,7 @@ function moreDetails() {
     buttonsArr.map(btn =>  {
         btn.addEventListener('click', () => {
             document.getElementById('modal').classList.remove('hide');
+            document.querySelector('#overlay').classList.remove('hide');
             modalContent.classList.remove('hide');
 
             contentModal.filter((content) => {    
@@ -112,6 +115,7 @@ function applyForEvent() {
     buttonsArr.map(btn =>  {
         btn.addEventListener('click', () => {
             document.getElementById('modal').classList.remove('hide');
+            document.querySelector('#overlay').classList.remove('hide');
 
             if(btn.classList.contains('premium')) {
                 modalContent.innerHTML = premium;   

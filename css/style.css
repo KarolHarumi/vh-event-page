@@ -432,6 +432,16 @@ p {
     color: #ff7a37; 
 }
 
+#overlay {
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
 @media only screen and (max-width: 900px) {
 
     .wrapper {
@@ -551,11 +561,15 @@ p {
 
     /* Modal */
     .modal {
-        width: 100%;
+        width: 90%;
     }
 
     .modal .success, 
     .modal .premium {
-        padding: 20px;
+        padding: 0;
+    }
+
+    .modal .modal-content {
+        padding: 0 40px;
     }
   }
