@@ -353,7 +353,7 @@ p {
 }
 
 .modal .success,
-.modal .error {
+.modal .premium {
     text-align: center;
     padding: 20px 60px;
 }
@@ -363,7 +363,7 @@ p {
     color: #40b70a; 
 }
 
-.modal .fa-times-circle {
+.modal .fa-crown {
     font-size: 46px;
-    color: #b30f0f; 
+    color: #ff7a37; 
 }
