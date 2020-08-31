@@ -56,33 +56,34 @@ const contentModal = [
 ]
 
 function closeModal() {
-    document.getElementById('modal').classList.add('hide');
+    const modal = document.getElementById('modal'),
+          btnClose = document.querySelector('.close');
 
-    document.querySelector('.close').addEventListener('click', () => {
-        document.getElementById('modal').classList.add('hide');
+    modal.classList.add('hide');
+
+    btnClose.addEventListener('click', () => {
+        modal.classList.add('hide');
     });
 }
 
 function moreDetails() {
     let buttons = document.querySelectorAll('.more-details'),
-        buttonsArr = Array.prototype.slice.call(buttons);
+        buttonsArr = Array.prototype.slice.call(buttons),
+        modalContent = document.querySelector('.modal-content');
 
     buttonsArr.map(btn =>  {
         btn.addEventListener('click', () => {
             document.getElementById('modal').classList.remove('hide');
-            document.querySelector('.modal-content').classList.remove('hide');
+            modalContent.classList.remove('hide');
 
             contentModal.filter((content) => {    
                 if(content.id === btn.getAttribute('data-event')) {
-                    document.querySelector('.modal-content').innerHTML = `
-                    <h2>MeetUp Brazil</h2>
-                    <h3>October 14th & October 19th 2020</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> <span class="place">Santiago - Chile</span></p>
+                    modalContent.innerHTML = `
+                    <h2>${content.title}</h2>
+                    <h3>${content.date}</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> <span class="place">${content.place}</span></p>
                     <p><i class="fas fa-calendar-day"></i> Application date 08/20/2020</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam massa enim, eleifend eu erat et, venenatis lacinia leo. Vivamus placerat fringilla tellus sed posuere. Ut dapibus purus sit amet massa luctus, sit amet aliquam sem facilisis. Nullam non dictum nisi, vel fringilla dui. Suspendisse quis pretium purus. Donec justo metus, rutrum ac hendrerit sit amet, rhoncus sit amet augue. Aenean ornare accumsan nisi, viverra consectetur felis lobortis vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec malesuada et nunc ut aliquet. Vestibulum sodales, ante in gravida vestibulum, lorem leo fermentum urna, nec tempor orci orci non ante.</p>`;
-                    document.querySelector('.modal-content h2').innerHTML = `${content.title}`;
-                    document.querySelector('.modal-content h3').innerHTML = `${content.date}`;
-                    document.querySelector('.modal-content .place').innerHTML = `${content.place}`;
                 }
             });
         });
@@ -91,7 +92,8 @@ function moreDetails() {
 
 function applyForEvent() {
     let buttons = document.querySelectorAll('.apply'),
-        buttonsArr = Array.prototype.slice.call(buttons);
+        buttonsArr = Array.prototype.slice.call(buttons),
+        modalContent = document.querySelector('.modal-content');
 
     const success = `
         <div class="success">
@@ -112,11 +114,11 @@ function applyForEvent() {
             document.getElementById('modal').classList.remove('hide');
 
             if(btn.classList.contains('premium')) {
-                document.querySelector('.modal-content').innerHTML = premium;   
+                modalContent.innerHTML = premium;   
                 return false; 
             }
 
-            document.querySelector('.modal-content').innerHTML = success;
+            modalContent.innerHTML = success;
             
             btn.setAttribute('disabled', 'disabled');
             btn.innerHTML = "Applied";

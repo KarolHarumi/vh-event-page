@@ -88,7 +88,8 @@ p {
     padding: 2px 0 0;
 }
 
-.header .menu-mobile {
+.header .menu-mobile,
+.header #menu {
     display: none;
 }
 
@@ -198,35 +199,35 @@ p {
 }
 
 .card .icon-brazil {
-    background-image: url('./../assets/images/brazil.png');
+    background-image: url('https://programee.com.br/karol/brazil.png');
 }
 
 .card .icon-chile {
-    background-image: url('./../assets/images/chile.png');
+    background-image: url('https://programee.com.br/karol/chile.png');
 }
 
 .card .icon-argentina {
-    background-image: url('./../assets/images/argentina.png');
+    background-image: url('https://programee.com.br/karol/argentina.png');
 }
 
 .card .icon-colombia {
-    background-image: url('./../assets/images/colombia.png');
+    background-image: url('https://programee.com.br/karol/colombia.png');
 }
 
 .card .city-sp {
-    background-image: url('./../assets/images/sp_city.jpeg');
+    background-image: url('https://programee.com.br/karol/sp_city.jpeg');
 }
 
 .card .city-sa {
-    background-image: url('./../assets/images/sa_city.jpg');
+    background-image: url('https://programee.com.br/karol/sa_city.jpg');
 }
 
 .card .city-me {
-    background-image: url('./../assets/images/me_city.jpeg');
+    background-image: url('https://programee.com.br/karol/me_city.jpeg');
 }
 
 .card .city-ro {
-    background-image: url('./../assets/images/ro_city.jpg');
+    background-image: url('https://programee.com.br/karol/ro_city.jpg');
 }
 
 .card .content-card {
@@ -369,7 +370,7 @@ p {
 }
 
 .half-card.premium-card {
-    background: url('./../assets/images/bg_detail.png') no-repeat 0 0;
+    background: url('https://programee.com.br/karol/bg_detail.png') no-repeat 0 0;
 }
 
 .half-card .button-container {
@@ -546,5 +547,15 @@ p {
     .featured-card .outline-button-default + .button-default,
     .half-card .outline-button-default + .button-default {
         margin: 10px 0 0;
+    }
+
+    /* Modal */
+    .modal {
+        width: 100%;
+    }
+
+    .modal .success, 
+    .modal .premium {
+        padding: 20px;
     }
   }
